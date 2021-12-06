@@ -62,7 +62,8 @@ if __name__ == "__main__":
             for body in message:
               body_s = body.text
 
-            out_f.write(args.DELIM.join([conv_id, medium,donated, msg_id, part_id, time_s,body_s]))
+            out_f.write(args.DELIM.join(item or '' for item in [conv_id, medium,donated, msg_id, part_id, time_s,body_s]) + "\n")
+
 #            out_f.write('{},{},{},{},{},{},{}\n'.format(conv_id, medium,
 #                                                donated, msg_id, part_id, time_s, body_s))
 	      
